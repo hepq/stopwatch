@@ -42,10 +42,7 @@ resetBtn.addEventListener('click', function() {
     millisec = 0;
     count = 0;
     countGap = 0;
-    document.getElementById('hr').innerHTML = "00";
-    document.getElementById('min').innerHTML = "00";
-    document.getElementById('sec').innerHTML = "00";
-    document.getElementById('count').innerHTML = "00";
+    document.getElementById("time").innerHTML = "00:00:00.00"
 });
 
 function stopWatch() {
@@ -77,10 +74,8 @@ function stopWatch() {
         millisecString = "0" + millisecString;
     }
 
-    document.getElementById('hr').innerHTML = hrString;
-    document.getElementById('min').innerHTML = minString;
-    document.getElementById('sec').innerHTML = secString;
-    document.getElementById('count').innerHTML = millisecString;
+    let showTime = `${ hrString }:${minString}:${secString}.${millisecString}`;
+    document.getElementById('time').innerHTML = showTime;
 
     setTimeout(stopWatch, 10);
 }
