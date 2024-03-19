@@ -52,7 +52,7 @@ function stopWatch() {
     count = count / 1000 | 0;
     second = count % 60;
     count = count / 60 | 0;
-    minute = count & 60;
+    minute = count % 60;
     count = count / 60 | 0;
     hour = count;
     
