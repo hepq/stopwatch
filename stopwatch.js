@@ -42,12 +42,15 @@ resetBtn.addEventListener('click', function() {
     millisec = 0;
     count = 0;
     countGap = 0;
+    circleTimer();
     document.getElementById("time").innerHTML = "00:00:00.00"
 });
 
 function stopWatch() {
     if(!timer) return;
     count = Date.now() - startTime - countGap;
+    circleTimer();
+
     millisec = count % 1000 / 10 | 0;
     count = count / 1000 | 0;
     second = count % 60;
@@ -74,8 +77,7 @@ function stopWatch() {
         millisecString = "0" + millisecString;
     }
 
-    let showTime = `${ hrString }:${minString}:${secString}.${millisecString}`;
+    let showTime = `${hrString}:${minString}:${secString}.${millisecString}`;
     document.getElementById('time').innerHTML = showTime;
-
     setTimeout(stopWatch, 10);
 }

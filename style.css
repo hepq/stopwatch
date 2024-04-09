@@ -1,0 +1,50 @@
+#container{
+    margin-top: 10%;
+}
+
+#minute, #second,#minutePoint, #secondPoint{
+    position: absolute;
+    border-radius: 100%;  
+}
+#minute, #second{
+    z-index: -1;
+    width: 30%;
+    padding-top: 30%;
+    top: 10%;
+    left: 35%;
+}
+#minute {
+    border: 3px solid #393E46;
+}
+#minutePoint, #secondPoint{
+    z-index: 5;
+    background: #4ECCA3;
+}
+#minutePoint{
+    width: 10%;
+    height: 10%;
+    left: 45%;
+    top: -5%;
+}
+#secondPoint{
+    width: 6%;
+    height: 6%;
+    left: 47%;
+    top: -3%;
+}
+body{
+    background-color: #232931;
+}
+#time{
+    color: #EEEEEE;
+}
+#start, #stop, #reset{
+    background-color: #3EBC93;
+    color: #232931;
+}
+#start:hover{
+    background-color: #4ECCA3;
+}
+#start:active{
+    background-color: #5EDCB3;
+}
